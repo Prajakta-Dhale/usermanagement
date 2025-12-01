@@ -10,6 +10,20 @@ const AllUser=()=>{
         setEmp(users);
         setShowemp(true);
     }
+
+    const deleteAllUser=()=>{
+        setEmp([]);
+        setShowemp(false);
+    }
+
+    const deleteUser=(id)=>{
+        const updatedEmp=emp.filter(e=>e.id!==id);
+        setEmp(updatedEmp);
+        if(updatedEmp.length===0)
+        {
+            setShowemp(false);
+        }
+    }
     return(
         <>
         <div>
@@ -27,6 +41,10 @@ const AllUser=()=>{
                 </tbody>
                 </table>
             ) }
+
+            {showemp &&(
+                <button onClick={deleteAllUser}>Delete All Emp</button>
+            )}
         </div>
         </>
     )
