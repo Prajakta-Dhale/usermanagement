@@ -53,12 +53,12 @@ export default function Register()
 
             <br /><br />
             <label>Enter Password</label>
-            <input type="text" name="upass" onChange={handleChange}/>
+            <input type="password" name="upass" onChange={handleChange}/>
             {errors.upass && <p><mark>{errors.upass}</mark></p>}
 
             <br /><br />
             <label>Enter Confirm Password</label>
-            <input type="text" name="ucpass" onChange={handleChange}/>
+            <input type="password" name="ucpass" onChange={handleChange}/>
             {errors.ucpass && <p><mark>{errors.ucpass}</mark></p>}
             
             <br /><br />
